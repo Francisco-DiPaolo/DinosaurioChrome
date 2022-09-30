@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -7,16 +5,17 @@ public class SpawnManager : MonoBehaviour
     public Transform[] arraySpawn;
     public float spawnTimeStart;
     public float spawnTime;
-    public GameObject enemie;
+    public float speedEnemy;
+    public GameObject enemies;
 
     void Start()
     {
-        InvokeRepeating("SpawnEnemie", spawnTimeStart, spawnTime);
+        InvokeRepeating("SpawnEnemies", spawnTimeStart, spawnTime);
     }
 
-    void SpawnEnemie()
+    public void SpawnEnemies()
     {
         int randomSpawn = Random.Range(0, 2);
-        Instantiate(enemie, arraySpawn[randomSpawn].position, Quaternion.identity);
+        Instantiate(enemies, arraySpawn[randomSpawn].position, Quaternion.identity);
     }
 }

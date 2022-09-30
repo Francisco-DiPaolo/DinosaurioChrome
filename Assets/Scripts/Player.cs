@@ -1,22 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Movement
     public float speed;
-    Rigidbody2D rb;
-
-    // Jump
-    bool isJumping;
     public float jumpForce;
     public float jump;
     public float maxJump;
-    Vector2 jumpDirection = new Vector2(0, 2);
 
-    // Dead
-    bool isDead;
+    public bool isJumping;
+    public bool isDead;
+
+    Rigidbody2D rb;
+    Vector2 jumpDirection = new Vector2(0, 2);
 
     void Start()
     {
@@ -25,19 +20,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        //Movement();
         Jump();
     }
-
-    /*void Movement()
-    {
-        float inputX = Input.GetAxis("Horizontal");
-
-        if(speed != 0)
-        {
-            transform.Translate(transform.right * inputX * speed * Time.deltaTime);
-        }
-    }*/
 
     void Jump()
     {
@@ -59,13 +43,11 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             isGrounded();
-            Debug.Log(jump);
         }
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
             GameManager.eventIsDead?.Invoke();
-            Debug.Log("Enemy");
         }
     }
 }

@@ -1,10 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemies : MonoBehaviour
 {
-    public float speed;
+    float speed;
+
+    private void Start()
+    {
+        speed = FindObjectOfType<SpawnManager>().speedEnemy;
+    }
 
     void Update()
     {
