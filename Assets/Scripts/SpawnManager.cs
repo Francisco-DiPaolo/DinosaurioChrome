@@ -10,12 +10,14 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
+        enemies = Resources.Load<GameObject>("Prefabs/Enemy");
         InvokeRepeating("SpawnEnemies", spawnTimeStart, spawnTime);
     }
 
+  
     public void SpawnEnemies()
     {
-        int randomSpawn = Random.Range(0, 2);
+        int randomSpawn = Random.Range(0, arraySpawn.Length);
         Instantiate(enemies, arraySpawn[randomSpawn].position, Quaternion.identity);
     }
 }

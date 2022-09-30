@@ -287,7 +287,7 @@ MonoBehaviour:
   spawnTimeStart: 1
   spawnTime: 3
   speedEnemy: 4
-  enemies: {fileID: 5920434399541529385, guid: 14537dbb6f8ccb24290b2512cb876e6d, type: 3}
+  enemies: {fileID: 0}
 --- !u!1 &818216944
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class Enemies : MonoBehaviour
 {
-    float speed;
+    public float speed;
 
     private void Start()
     {
+        //speed = 4f;
         speed = FindObjectOfType<SpawnManager>().speedEnemy;
     }
 

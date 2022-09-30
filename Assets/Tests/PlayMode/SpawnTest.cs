@@ -18,7 +18,6 @@ public class SpawnTest
         spawnManager.spawnTime = 3f;
         spawnManager.enemies = new GameObject { };
         spawnManager.enemies.tag = "Enemy";
-        spawnManager.speedEnemy = 4f;
 
         int random = Random.Range(1, 6);
         for (int i = 0; i < random; i++) spawnManager.SpawnEnemies();
