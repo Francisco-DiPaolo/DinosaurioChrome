@@ -14,7 +14,6 @@ public class SpawnManager : MonoBehaviour
         InvokeRepeating("SpawnEnemies", spawnTimeStart, spawnTime);
     }
 
-  
     public void SpawnEnemies()
     {
         int randomSpawn = Random.Range(0, arraySpawn.Length);

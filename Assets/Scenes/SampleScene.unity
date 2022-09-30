@@ -246,6 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 647674550}
   - component: {fileID: 647674551}
+  - component: {fileID: 647674552}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -287,6 +288,23 @@ MonoBehaviour:
   spawnTimeStart: 1
   spawnTime: 3
   speedEnemy: 4
+  enemies: {fileID: 0}
+--- !u!114 &647674552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647674549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9930a3f57cd514047aca2b025d2081fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arraySpawn: []
+  spawnTimeStart: 0
+  spawnTime: 0
+  speedEnemy: 0
   enemies: {fileID: 0}
 --- !u!1 &818216944
 GameObject:

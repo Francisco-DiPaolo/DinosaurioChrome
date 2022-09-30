@@ -3,12 +3,11 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class SpawnAndDestroy
+public class SpawnAndDestroyTest
 {
     [UnityTest]
-    public IEnumerator SpawnAndDestroyEnemies()
+    public IEnumerator SpawnAndDestroyTestWithEnumeratorPasses()
     {
-
         GameObject spawner = new GameObject { };
         spawner.AddComponent<SpawnManager>();
         SpawnManager spawnManager = spawner.GetComponent<SpawnManager>();

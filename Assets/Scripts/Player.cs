@@ -20,12 +20,15 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Jump();
+        if(Input.GetButton("Jump"))
+        {
+            Jump();
+        }
     }
 
-    void Jump()
+    public void Jump()
     {
-        if (Input.GetButton("Jump") && jump < maxJump)
+        if (jump < maxJump)
         {
             rb.velocity = jumpDirection * jumpForce;
             jump++;
